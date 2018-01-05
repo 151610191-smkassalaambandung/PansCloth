@@ -1,13 +1,13 @@
 <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3"></span>
-      <span class="site-heading-lower">Toko</span>
+      <span class="site-heading-lower">Store</span>
     </h1>
 
     
-@foreach ($Lainnya as $data) 
+@foreach ($Lainnya as $data1) 
 @extends('layouts.user')
 @section('content')
- <body style="background:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(../img/img1/{{$data->cover}});
+ <body style="background:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(../img/img1/{{$data1->cover}});
               background-repeat: no-repeat;
               background-size: cover; 
               background-attachment: fixed;">
@@ -55,19 +55,29 @@
                 </li>
               </ul>
               <p class="address mb-5">
+                <p class="mb-0">
+                
+                  <b>Untuk Pemesanan Hubungi:</b>
+                <br>
+                <br>
+                WhatsApp/SMS/Telp : {!!$data1->notlp!!}
+                <br>
+                Line : {!!$data1->line!!}
+                <br>
+                E-mail : {!!$data1->email!!}
+              </p>
+              <br>
+              <br>
+
+              <b>Atau Datang Ke Offline Store Kami Di</b>
+              <br>
+              
+              <p class="address mb-5">
                 <em>
-                  <strong>Jalan Kenangan No.24</strong>
-                  <br>
-                  Bandung, Indonesia
+                  <strong>{!!$data1->alamat!!}</strong>
                 </em>
               </p>
-              <p class="mb-0">
-                <small>
-                  <em>Untuk Pemesanan Hubungi</em>
-                </small>
-                <br>
-                (022) 585-8468
-              </p>
+              
             </div>
           </div>
         </div>

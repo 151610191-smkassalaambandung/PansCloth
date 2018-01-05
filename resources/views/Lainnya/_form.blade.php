@@ -15,20 +15,6 @@
 </div>
 
 
-<div class="form-group{{ $errors->has('cover2') ? ' has-error' : '' }}">
-	{!! Form::label('cover2', 'Backgrond Admin', ['class'=>'col-md-2 control-label']) !!}
-	<div class="col-md-4">
-
-		{!! Form::file('cover2') !!}
-		@if (isset($Lainnya) && $Lainnya->cover2)
-		<p>
-		    <b>Gambar Saat Ini :</b>
-			{!! Html::image(asset('img/img2/'.$Lainnya->cover2), null, ['class'=>'img-rounded img-responsive']) !!}
-		</p>
-		@endif
-		{!! $errors->first('cover2', '<p class="help-block">:message</p>') !!}
-	</div>
-</div>
 
 
 
@@ -52,7 +38,7 @@
 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 	{!! Form::label('email', 'Email', ['class'=>'col-md-2 control-label']) !!}
 	<div class="col-md-8">
-		{!! Form::textarea('email', null, ['class'=>'form-control']) !!}
+		{!! Form::text('email', null, ['class'=>'form-control']) !!}
 		{!! $errors->first('email', '<p class="help-block">:message</p>') !!}
 	</div>
 </div>
@@ -60,7 +46,7 @@
 <div class="form-group{{ $errors->has('alamat') ? ' has-error' : '' }}">
 	{!! Form::label('alamat', 'Alamat', ['class'=>'col-md-2 control-label']) !!}
 	<div class="col-md-8">
-		{!! Form::textarea('alamat', null, ['class'=>'form-control']) !!}
+		{!! Form::text('alamat', null, ['class'=>'form-control']) !!}
 		{!! $errors->first('alamat', '<p class="help-block">:message</p>') !!}
 	</div>
 </div>

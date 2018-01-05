@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lainnya extends Model
 {
-        protected $fillable = ['id','cover','cover2','notlp','line','email','alamat'];
+        protected $fillable = ['id','cover','notlp','line','email','alamat'];
 }
 
 

@@ -23,7 +23,7 @@ public function index(Request $request, Builder $htmlBuilder)
         $Lainnya = Lainnya::all();
 
      if ($request->ajax()) {
-    $Lainnya = Lainnya::select(['id','cover','cover2','notlp','line','email','alamat']);
+    $Lainnya = Lainnya::select(['id','cover','notlp','line','email','alamat']);
         return Datatables::of($Lainnya)
         ->addColumn('cover', function($Lainnya){
             return '<img src="/img/img1/'.$Lainnya->cover. '" height="100px" width="200px">';
@@ -82,23 +82,18 @@ public function index(Request $request, Builder $htmlBuilder)
     {
         $poto = Lainnya::find($id);
         $poto->update($request->all());
-        if ($request->hasFile('cover','cover2')) {
+        if ($request->hasFile('cover')) {
 // menambil cover yang diupload berikut ekstensinya
             $filename = null;
             $uploaded_cover = $request->file('cover');
-            $uploaded_cover2 = $request->file('cover2');
 // mengambil extension file
             $extension = $uploaded_cover->getClientOriginalExtension();
-            $extension2 = $uploaded_cover2->getClientOriginalExtension();
 // membuat nama file random dengan extension
             $filename = md5(time()) . '.' . $extension;
-            $filename2 = md5(time()) . '.' . $extension2;
 // menyimpan cover ke folder public/img
             $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'img/img1';
-            $destinationPath2 = public_path() . DIRECTORY_SEPARATOR . 'img/img2';
 // memindahkan file ke folder public/img
             $uploaded_cover->move($destinationPath, $filename);
-            $uploaded_cover2->move($destinationPath2, $filename2);
 // hapus cover lama, jika ada
             if ($poto->cover) {
                 $old_cover = $poto->cover;
@@ -110,20 +105,9 @@ public function index(Request $request, Builder $htmlBuilder)
 // File sudah dihapus/tidak ada
                 }
             }
-            if ($poto->cover2) {
-                $old_cover = $poto->cover2;
-                $filepath = public_path() . DIRECTORY_SEPARATOR . 'img/img2'
-                . DIRECTORY_SEPARATOR . $poto->cover2;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-// File sudah dihapus/tidak ada
-                }
-            }
 
             // ganti field cover dengan cover yang baru
             $poto->cover = $filename;
-            $poto->cover2 = $filename2;
             $poto->save();
         }
         Session::flash("flash_notification", [

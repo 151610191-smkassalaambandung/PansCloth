@@ -16,7 +16,6 @@ class CreateLainnyasTable extends Migration
         Schema::create('lainnyas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cover')->nullable();
-            $table->string('cover2')->nullable();
             $table->string('notlp');
             $table->string('line');
             $table->string('email');

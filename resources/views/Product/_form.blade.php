@@ -1,17 +1,3 @@
-<div class="form-group{{ $errors->has('nama_product') ? ' has-error' : '' }}">
-	{!! Form::label('nama_product', 'Nama Product', ['class'=>'col-md-2 control-label']) !!}
-	<div class="col-md-8">
-		{!! Form::text('nama_product', null, ['class'=>'form-control']) !!}
-		{!! $errors->first('nama_product', '<p class="help-block">:message</p>') !!}
-	</div>
-</div>
-<div class="form-group{{ $errors->has('detail') ? ' has-error' : '' }}">
-	{!! Form::label('detail', 'Detail', ['class'=>'col-md-2 control-label']) !!}
-	<div class="col-md-8">
-		{!! Form::textarea('detail', null, ['class'=>'form-control']) !!}
-		{!! $errors->first('detail', '<p class="help-block">:message</p>') !!}
-	</div>
-</div>
 <div class="form-group{{ $errors->has('cover') ? ' has-error' : '' }}">
 	{!! Form::label('cover', 'Cover', ['class'=>'col-md-2 control-label']) !!}
 	<div class="col-md-4">
@@ -24,6 +10,45 @@
 		</p>
 		@endif
 		{!! $errors->first('cover', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+<div class="form-group{{ $errors->has('nama_product') ? ' has-error' : '' }}">
+	{!! Form::label('nama_product', 'Nama Product', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-8">
+		{!! Form::text('nama_product', null, ['class'=>'form-control']) !!}
+		{!! $errors->first('nama_product', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
+<div class="form-group{{ $errors->has('bahan') ? ' has-error' : '' }}">
+	{!! Form::label('bahan', 'Bahan', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-8">
+		{!! Form::text('bahan', null, ['class'=>'form-control']) !!}
+		{!! $errors->first('bahan', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
+<div class="form-group{{ $errors->has('warna') ? ' has-error' : '' }}">
+	{!! Form::label('warna', 'Warna', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-8">
+		{!! Form::text('warna', null, ['class'=>'form-control']) !!}
+		{!! $errors->first('warna', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
+<div class="form-group{{ $errors->has('ukuran') ? ' has-error' : '' }}">
+	{!! Form::label('ukuran', 'Ukuran', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-8">
+		{!! Form::text('ukuran', null, ['class'=>'form-control']) !!}
+		{!! $errors->first('ukuran', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
+<div class="form-group{{ $errors->has('harga') ? ' has-error' : '' }}">
+	{!! Form::label('harga', 'Harga', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-8">
+		{!! Form::text('harga', null, ['class'=>'form-control']) !!}
+		{!! $errors->first('harga', '<p class="help-block">:message</p>') !!}
 	</div>
 </div>
 <div class="form-group">

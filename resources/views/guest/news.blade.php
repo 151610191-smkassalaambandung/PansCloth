@@ -1,6 +1,6 @@
 <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3"></span>
-      <span class="site-heading-lower">Produk Terbaru</span>
+      <span class="site-heading-lower">News</span>
     </h1>
 
     
@@ -28,7 +28,16 @@
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
 
-              <p class="mb-0"><center><h2><b><u>Detail</u></b></h2></center>  <br>{!!$data->detail!!}</p>
+             <p class="mb-0"><center><h2><b><u>Detail</u></b></h2></center>  <br>
+              Bahan &nbsp&nbsp : &nbsp {!!$data->bahan!!}
+              <br>
+              Warna &nbsp&nbsp : &nbsp {!!$data->warna!!}
+              <br>
+              Ukuran &nbsp: &nbsp {!!$data->ukuran!!}
+              <br>
+              Harga &nbsp&nbsp&nbsp: &nbsp {!!$data->harga!!}
+
+              </p>
             </div>
           </div>
         </div>

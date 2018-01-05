@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use App\Store;
+use App\Lainnya;
 use Session;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\StoreBookRequest;
@@ -86,7 +87,8 @@ public function index(Request $request, Builder $htmlBuilder)
     public function edit($id)
     {
            $Store = Store::find($id);
-        return view('Store.edit')->with(compact('Store'));
+           $Lainnya = Lainnya::all();
+        return view('Store.edit')->with(compact('Store','Lainnya'));
     
     }
 

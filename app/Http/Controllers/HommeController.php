@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use App\Home;
+use App\Lainnya;
 use Session;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\StoreBookRequest;
@@ -80,7 +81,8 @@ public function index(Request $request, Builder $htmlBuilder)
     public function edit($id)
     {
            $Home = Home::find($id);
-        return view('Home.edit')->with(compact('Home'));
+           $Lainnya = Lainnya::all();
+        return view('Home.edit')->with(compact('Home','Lainnya'));
     
     }
 

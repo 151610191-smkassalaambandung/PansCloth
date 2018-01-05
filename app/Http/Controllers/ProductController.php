@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use App\Product;
+use App\Lainnya;
 use Session;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\StoreBookRequest;
@@ -20,9 +21,10 @@ class ProductController extends Controller
 public function index(Request $request, Builder $htmlBuilder)
     {
         $Product = Product::all();
+        $Lainnya = Lainnya::all();
 
      if ($request->ajax()) {
-    $Product = Product::select(['id','nama_product','detail','cover']);
+    $Product = Product::select(['id','nama_product', 'bahan','warna','ukuran','harga','cover']);
         return Datatables::of($Product)
         ->addColumn('cover', function($Product){
             return '<img src="/img/img7/'.$Product->cover. '" height="100px" width="200px">';
@@ -40,9 +42,12 @@ public function index(Request $request, Builder $htmlBuilder)
     $html = $htmlBuilder
     ->addColumn(['data' => 'cover', 'name'=>'cover', 'title'=>'Gambar'])
     ->addColumn(['data' => 'nama_product', 'name'=>'nama_product', 'title'=>'Nama Product'])
-    ->addColumn(['data' => 'detail', 'name'=>'detail', 'title'=>'Detail'])
+    ->addColumn(['data' => 'bahan', 'name'=>'bahan', 'title'=>'Bahan'])
+    ->addColumn(['data' => 'warna', 'name'=>'warna', 'title'=>'Warna'])
+    ->addColumn(['data' => 'ukuran', 'name'=>'ukuran', 'title'=>'Ukuran'])
+    ->addColumn(['data' => 'harga', 'name'=>'harga', 'title'=>'Harga'])
     ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, 'searchable'=>false]);
-    return view('Product.index')->with(compact('Product','html'));
+    return view('Product.index')->with(compact('Product','html','Lainnya'));
     }
 
     /**
@@ -110,7 +115,8 @@ public function index(Request $request, Builder $htmlBuilder)
     public function edit($id)
     {
            $Product = Product::find($id);
-        return view('Product.edit')->with(compact('Product'));
+           $Lainnya = Lainnya::all();
+        return view('Product.edit')->with(compact('Product','Lainnya'));
     
     }
 

@@ -18,88 +18,12 @@ class ProductSeeder extends Seeder
     {
              $Product = Product::create([
             'nama_product' => 'Jeans',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'0664b58f8d8ddcc73470b53a3eceda04.jpg']);
-              $Product2 = Product::create([
-            'nama_product' => 'Caduroy',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'a9a660f74088d813eccbb080667d73c7.jpg']);
-               $Product3 = Product::create([
-            'nama_product' => 'Cutbray',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'e0298f8a96c2e29c2d640b9659ea213f.jpg']);
-                $Product4 = Product::create([
-            'nama_product' => 'Pencil',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'58630c4a68ea9a6de741307ae59a4e85.jpg']);
-                 $Product5 = Product::create([
-            'nama_product' => 'Joger',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'37edcb62f27212a7e8d7547d830be25f.jpg']);
-                  $Product6 = Product::create([
-            'nama_product' => 'Short Jeans',
-            'detail' =>'<!DOCTYPE html>
-  						<html>
-						<head>
-						</head>
-						<body>
-						<p>Bahan&nbsp; : Levis</p>	
-						<p>Ukuran : 39-41</p>
-						<p>Warna&nbsp; : Navy , Black</p>
-						<p>Harga&nbsp; : 234 K</p>
-						</body>
-						</html>',
-            'cover'=>'ee0644111ca343e7a5d8d24034c70066.jpg']);
+            'bahan' =>' Levis',
+            'ukuran' =>'39-41',
+            'warna' =>'Navy , Black',
+            'harga' =>' 234 K',
+            'cover'=>'9f17dfcf2fceda1eff6375282c4ae2ef.jpg']);
+ 
 
 
 
@@ -171,6 +95,14 @@ class ProductSeeder extends Seeder
 							</html>'
             ]);
 
+
+                 $Lainnya = Lainnya::create([
+            'cover'=>'ff336f106ad70b0367a72200468175da.jpg',
+            'notlp'=>'(022) 9090-9292',
+            'line' => '@panscompany (Jangan Lupa Gunakan @) ',
+            'email' => 'info@panscompany.com',
+            'alamat' => 'Jalan Kenangan No.24  Bandung, Indonesia'
+            ]);
 
 
     }
