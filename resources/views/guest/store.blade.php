@@ -57,7 +57,7 @@
               <p class="address mb-5">
                 <p class="mb-0">
                 
-                  <b>Untuk Pemesanan Hubungi:</b>
+                  <b>Untuk Menghubungi:</b>
                 <br>
                 <br>
                 WhatsApp/SMS/Telp : {!!$data1->notlp!!}

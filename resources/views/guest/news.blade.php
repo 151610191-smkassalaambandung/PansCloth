@@ -34,8 +34,7 @@
               Warna &nbsp&nbsp : &nbsp {!!$data->warna!!}
               <br>
               Ukuran &nbsp: &nbsp {!!$data->ukuran!!}
-              <br>
-              Harga &nbsp&nbsp&nbsp: &nbsp {!!$data->harga!!}
+
 
               </p>
             </div>

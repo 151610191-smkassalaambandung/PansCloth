@@ -44,15 +44,9 @@
 	</div>
 </div>
 
-<div class="form-group{{ $errors->has('harga') ? ' has-error' : '' }}">
-	{!! Form::label('harga', 'Harga', ['class'=>'col-md-2 control-label']) !!}
-	<div class="col-md-8">
-		{!! Form::text('harga', null, ['class'=>'form-control']) !!}
-		{!! $errors->first('harga', '<p class="help-block">:message</p>') !!}
-	</div>
-</div>
+
 <div class="form-group">
 	<div class="col-md-8 col-md-offset-2">
-		{!! Form::submit('Update', ['class'=>'btn btn-primary']) !!}
+		{!! Form::submit('Simpan', ['class'=>'btn btn-primary']) !!}
 	</div>
 </div>

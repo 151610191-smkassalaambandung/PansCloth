@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('bahan');
             $table->string('ukuran');
             $table->string('warna');
-            $table->string('harga');
             $table->string('cover')->nullable();
             $table->timestamps();
         });

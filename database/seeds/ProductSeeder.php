@@ -21,7 +21,6 @@ class ProductSeeder extends Seeder
             'bahan' =>' Levis',
             'ukuran' =>'39-41',
             'warna' =>'Navy , Black',
-            'harga' =>' 234 K',
             'cover'=>'9f17dfcf2fceda1eff6375282c4ae2ef.jpg']);
  
 

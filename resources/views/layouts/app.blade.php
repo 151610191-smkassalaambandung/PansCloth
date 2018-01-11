@@ -57,16 +57,15 @@
                         <ul class="nav navbar-nav">
                             &nbsp;
                             @if (Auth::check())
-                            <li><a href="{{ url('/home') }}">Dashboard</a></li>
-
+  
                             @endif
                             @role('admin')
 
-                            <li><a href="{{ url('admin/Home/1/edit') }}">Home</a></li>
-                            <li><a href="{{ url('admin/About/1/edit') }}">About</a></li>
                             <li><a href="{{ route('Product.index') }}">Products</a></li>
-                            <li><a href="{{ url('admin/Store/1/edit') }}">Store</a></li>
-                            <li><a href="{{ url('admin/Lainnya/1/edit') }}">Lainnya</a></li>
+                            <li><a href="{{ url('admin/Home/1/edit') }}">Ubah Halaman Home</a></li>
+                            <li><a href="{{ url('admin/About/1/edit') }}">Ubah Halaman About</a></li>
+                            <li><a href="{{ url('admin/Store/1/edit') }}">Ubah Halaman Store</a></li>
+                            <li><a href="{{ url('admin/Lainnya/1/edit') }}">Ubah Lain Lainnya</a></li>
 
                           </ul>
 
