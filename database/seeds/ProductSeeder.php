@@ -7,6 +7,7 @@ use App\About;
 use App\Lainnya;
 use App\Store;
 use App\Jamker;
+use App\kategori;
 class ProductSeeder extends Seeder
 {
     /**
@@ -16,21 +17,166 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-             $Product = Product::create([
-            'nama_product' => 'Jeans',
-            'bahan' =>' Levis',
-            'ukuran' =>'39-41',
-            'warna' =>'Navy , Black',
-            'cover'=>'9f17dfcf2fceda1eff6375282c4ae2ef.jpg']);
  
+$kategori = kategori::create([
+            'nama_kategori' => 'Celana']);
+
+$kategori = kategori::create([
+            'nama_kategori' => 'Tas']);
+
+$kategori = kategori::create([
+            'nama_kategori' => 'Baju']);
+
+$kategori = kategori::create([
+            'nama_kategori' => 'Topi']);
+
+$kategori = kategori::create([
+            'nama_kategori' => 'Jaket']);
+
+
+
+
+
+
+            $Product1 = Product::create([
+            'kategori_id' => '3',
+            'nama_product' =>'Montain T-shirt ',
+            'bahan'=>' Kanvas',
+            'ukuran'=>' L',
+            'warna'=>'Putih',
+            'cover'=>'c79cc8d583ccb98c52521a684f5efa6b.jpg'
+            ]);
+
+    $Product2 = Product::create([
+            'kategori_id' => '3',
+            'nama_product' =>'Clans Eat Sleep Clash ',
+            'bahan'=>'Kanvas ',
+            'ukuran'=>'L ',
+            'warna'=>'Hitam',
+            'cover'=>'ffb5c34bc58a36433c3420408addddf3.jpg'
+            ]);
+
+
+    $Product3= Product::create([
+            'kategori_id' => '3',
+            'nama_product' =>' Grafiry',
+            'bahan'=>' Kanvas',
+            'ukuran'=>' L',
+            'warna'=>'Hitam',
+            'cover'=>'b1064a0aa61eb6c9ee2782ff92661892.jpg'
+            ]);
+
+
+    $Product4 = Product::create([
+            'kategori_id' => '5',
+            'nama_product' =>' Denim Woman',
+            'bahan'=>' Levis',
+            'ukuran'=>' M',
+            'warna'=>'Telor Asin',
+            'cover'=>'4d7a612a46123644580c9a662eb215bf.jpg'
+            ]);
+
+
+    $Product5 = Product::create([
+            'kategori_id' => '5',
+            'nama_product' =>' Rip Curlt',
+            'bahan'=>' Kanvas',
+            'ukuran'=>'L ',
+            'warna'=>'Coklat',
+            'cover'=>'3952cf3c72f63c38882ea21b58adee8e.jpeg'
+            ]);
+
+
+    $Product6 = Product::create([
+            'kategori_id' => '2',
+            'nama_product' =>' Marc Series',
+            'bahan'=>'Kanvas ',
+            'ukuran'=>'30cm - 60 cm ',
+            'warna'=>'Abu',
+            'cover'=>'26e6248078617f86c814b5453df2d454.jpg'
+            ]);
+
+
+    $Product7 = Product::create([
+            'kategori_id' => '2',
+            'nama_product' =>' Waist Bag',
+            'bahan'=>'Catton Kanvas ',
+            'ukuran'=>'30cm - 60 cm ',
+            'warna'=>'Navy cream',
+            'cover'=>'79f941a4c96bce6a1925b6091b543aca.jpg'
+            ]);
+
+
+    $Product8 = Product::create([
+            'kategori_id' => '2',
+            'nama_product' =>'Achile Black ',
+            'bahan'=>'Catton Kanvas ',
+            'ukuran'=>' 30cm - 60 cm',
+            'warna'=>'Black',
+            'cover'=>'d21db0b2dfab8b22a1134b3437d3f5bb.jpg'
+            ]);
+
+
+    $Product9 = Product::create([
+            'kategori_id' => '4',
+            'nama_product' =>'Bucket Drll Army ',
+            'bahan'=>'Catton Kanvas ',
+            'ukuran'=>'7 ',
+            'warna'=>'Cream',
+            'cover'=>'45e0cf40f3a234e8eb73202be89b9faf.png'
+            ]);
+
+
+    $Product10 = Product::create([
+            'kategori_id' => '4',
+            'nama_product' =>'Snap Back Pink ',
+            'bahan'=>' Catton Kanvas',
+            'ukuran'=>'7 ',
+            'warna'=>'Pink',
+            'cover'=>'7d416217cd52ef467530a6a4c947eddc.jpg'
+            ]);
+
+
+    $Product11 = Product::create([
+            'kategori_id' => '4',
+            'nama_product' =>'Snap Back Cream Black ',
+            'bahan'=>'Kanvas ',
+            'ukuran'=>' 7',
+            'warna'=>'Black',
+            'cover'=>'28b14604af9e9a5b45b6665de09c44a7.jpg'
+            ]);
+
+
+
+
+    $Product12 = Product::create([
+            'kategori_id' => '1',
+            'nama_product' =>'Casual',
+            'bahan'=>'Catton Kanvas ',
+            'ukuran'=>' 41',
+            'warna'=>'Black And Yellow',
+            'cover'=>'530af303baed9af89588b2ca0e5d5590.jpg '
+            ]);
+
+
+
+    $Product13 = Product::create([
+            'kategori_id' => '1',
+            'nama_product' =>' Cutbray Woman',
+            'bahan'=>'Catton Kanvas ',
+            'ukuran'=>' 41',
+            'warna'=>' Navy',
+            'cover'=>'c79e84cc16d3457df607fc171d27dc67.jpg '
+            ]);
+
 
 
 
              $Home = Home::create([
-            'textkecilhd' => 'KONVEKSI CELANA KUALITAS TERJAMIN',
+            'textkecilhd' => 'KUALITAS TERJAMIN DAN TERPERCAYA',
             'textbesarhd' =>'PANS COMPANY',
-            'cover'=>'a81efdd94ed640760b65bd087230e88e.jpg	',
-            'textkecilboldbd'=>'KONVEKSI BERKUALITAS',
+            'cover'=>'e04bb843e7df2403cf3a4220f5af50a8.png',
+            'textkecilboldbd'=>'DISTRO BANDUNG',
             'textbesarbd'=>'PANSCOMPANY',
             'textkecilbd'=>'<!DOCTYPE html>
 							<html>
@@ -41,22 +187,22 @@ class ProductSeeder extends Seeder
 								</body>
 								</html>',
             'textkecilboldft'=>'DATANG DAN BUKTIKAN SENDIRI KE STORE KAMI',
-            'textbesarft'=>'DISC 50% ',
+            'textbesarft'=>'DISC 20% ',
             'textkecilft'=>'<!DOCTYPE html>
-							<html>
-							<head>
-							</head>
-							<body>
-							<p>Disciunt 50% Buat Kalian Yg Bawa Pacar Orang Lain !!!</p>
-							</body>
-							</html>'
+                            <html>
+                            <head>
+                            </head>
+                            <body>
+                            <p>Disciunt 50% Sampai Tanggal 30 Maret , Datang Jangan Sampai Terlewatkan !!</p>
+                            </body>
+                            </html>'
             ]);
 
 
 
                 $About = About::create([
-            'cover'=>'b01a7c098bb0924a6d71c209059b8a9a.jpg',
-            'textkecilbold' => 'About Our Company',
+            'cover'=>'6de06d1dc373fafa0f0d78327b6e43c2.jpg',
+            'textkecilbold' => 'About Our Distro',
             'textbesar' => 'Pans Company',
             'textkecil' => '<!DOCTYPE html>
 							<html>
@@ -80,9 +226,9 @@ class ProductSeeder extends Seeder
             'Jumat'=>'7:30 Sampai 21:00',
             'Sabtu'=>'7:30 Sampai 21:00',
             'Minggu'=>'7:30 Sampai 21:00',
-            'cover'=>'5b339e5260ee22a52e22d30a490988de.jpg',
-            'textkecilbold' => 'STRONG COFFEE, STRONG ROOTS',
-            'textbesar' => 'ABOUT OUR CAFE',
+            'cover'=>'6de06d1dc373fafa0f0d78327b6e43c2.jpg',
+            'textkecilbold' => 'Distro Bandung Berkualitras',
+            'textbesar' => 'ABOUT OUR DISTRO',
             'textkecil' => '<!DOCTYPE html>
 							<html>
 							<head>

@@ -10,6 +10,7 @@ use Yajra\Datatables\Datatables;
 use App\Product;
 use App\Home;
 use App\About;
+use App\kategori;
 use App\Store;
 use App\Lainnya;
 use Laratrust\LaratrustFacade as Laratrust;
@@ -37,7 +38,8 @@ class GuestsController extends Controller
    {
        $Product = Product::orderBy('nama_product','asc')->get();
        $Lainnya = Lainnya::all();
-       return view('guest.products')->with(compact('Product','Lainnya')); 
+       $kategori = kategori::all();
+       return view('guest.products')->with(compact('Product','Lainnya','kategori')); 
    }
 
    public function news(Request $request, Builder $htmlBuilder)
@@ -63,6 +65,13 @@ public function about(Request $request, Builder $htmlBuilder)
        return view('guest.about')->with(compact('About','Lainnya')); 
    }
 
+public function showperkategori($id)
+   {
+       $filtercategori = Product::where('kategori_id','=',$id)->get();
+       $Lainnya = Lainnya::all();
+       $kategori = kategori::all();
+       return view('guest.kategori')->with(compact('filtercategori','Lainnya','kategori')); 
+   }
 
 
 }

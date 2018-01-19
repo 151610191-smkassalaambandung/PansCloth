@@ -17,7 +17,7 @@
            <li class="nav-item px-lg-1">
               <a class="nav-link text-uppercase text-expanded" href="/products">Semua Produk</a>
             </li>
-           @foreach ($kategori as $data2)
+            @foreach ($kategori as $data2)
             <li class="nav-item px-lg-1">
               <a class="nav-link text-uppercase text-expanded" href="{{route('showperkategori', $data2->id)}}">{!!$data2->nama_kategori!!}</a>
             </li>
@@ -34,7 +34,7 @@
 
 
 
-         @foreach ($Product as $data)
+         @foreach ($filtercategori as $data)
  
     <section class="page-section">
       <div class="container">

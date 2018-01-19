@@ -22,7 +22,7 @@ Route::get('/home', 'AdminController@index');
 Route::group(['prefix'=>'admin', 'middleware'=>['auth', 'role:admin']], function () {
 //route halaman admin
 	Route::resource('About', 'AboutController');
-	
+	Route::resource('kategori', 'KategoriController');
 	Route::resource('Product', 'ProductController');
 	Route::resource('Home', 'HommeController');
 	Route::resource('Store', 'StoreController');
@@ -34,3 +34,4 @@ Route::resource('products', 'GuestsController@products');
 Route::resource('store', 'GuestsController@store');
 Route::resource('admin', 'GuestsController@admin');
 Route::resource('news', 'GuestsController@news');
+Route::get('/model/{id}', array('as' => 'showperkategori', 'uses' =>'GuestsController@showperkategori'));

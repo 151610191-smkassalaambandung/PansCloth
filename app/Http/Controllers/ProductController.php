@@ -24,7 +24,7 @@ public function index(Request $request, Builder $htmlBuilder)
         $Lainnya = Lainnya::all();
 
      if ($request->ajax()) {
-    $Product = Product::select(['id','nama_product', 'bahan','warna','ukuran','cover']);
+    $Product = Product::select(['id','kategori_id','nama_product', 'bahan','warna','ukuran','cover']);
         return Datatables::of($Product)
         ->addColumn('cover', function($Product){
             return '<img src="/img/img7/'.$Product->cover. '" height="100px" width="200px">';
@@ -41,6 +41,7 @@ public function index(Request $request, Builder $htmlBuilder)
 
     $html = $htmlBuilder
     ->addColumn(['data' => 'cover', 'name'=>'cover', 'title'=>'Gambar'])
+
     ->addColumn(['data' => 'nama_product', 'name'=>'nama_product', 'title'=>'Nama Product'])
     ->addColumn(['data' => 'bahan', 'name'=>'bahan', 'title'=>'Bahan'])
     ->addColumn(['data' => 'warna', 'name'=>'warna', 'title'=>'Warna'])

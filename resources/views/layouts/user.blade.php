@@ -63,7 +63,7 @@
 
         <footer class="footer text-faded text-center py-5">
       <div class="container">
-       <p class="m-0 small">Copyright &copy; PansCompany.<i>cloth</i> 2018</p>
+       <h4><p class="m-0 small">Copyright &copy; PansCompany.<i>cloth</i> 2018</p></h4>
       </div>
     </footer>
 

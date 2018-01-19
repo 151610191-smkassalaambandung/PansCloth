@@ -12,6 +12,16 @@
 		{!! $errors->first('cover', '<p class="help-block">:message</p>') !!}
 	</div>
 </div>
+
+<div class="form-group{{ $errors->has('kategori_id') ? ' has-error' : '' }}">
+	{!! Form::label('kategori_id', 'Kategori Product', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-4">
+		{!! Form::select('kategori_id',[''=>'']+App\kategori::pluck('nama_kategori','id')->all(), null,['class'=>'form-control'])  !!}
+		{!! $errors->first('kategori_id', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
+
 <div class="form-group{{ $errors->has('nama_product') ? ' has-error' : '' }}">
 	{!! Form::label('nama_product', 'Nama Product', ['class'=>'col-md-2 control-label']) !!}
 	<div class="col-md-8">

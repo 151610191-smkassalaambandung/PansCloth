@@ -62,6 +62,7 @@
                             @role('admin')
 
                             <li><a href="{{ route('Product.index') }}">Products</a></li>
+                               <li><a href="{{ route('kategori.index') }}">Kategori</a></li>
                             <li><a href="{{ url('admin/Home/1/edit') }}">Ubah Halaman Home</a></li>
                             <li><a href="{{ url('admin/About/1/edit') }}">Ubah Halaman About</a></li>
                             <li><a href="{{ url('admin/Store/1/edit') }}">Ubah Halaman Store</a></li>
